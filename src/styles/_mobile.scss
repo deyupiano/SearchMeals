@@ -1,0 +1,581 @@
+@media screen and (max-width: 767px) {
+    #app {
+
+        .nav{
+            grid-template-columns: 40px 1fr 450px;
+            .item{
+
+            }
+            .logo{
+                img{
+                    width: 100px;
+                }
+            }
+            .extras{
+                width: 210px;
+                grid-template-columns: repeat(3, 60px);
+                position: absolute;
+                right: 0px;
+                margin-right: 0;
+                .notifications{
+                    display: none;
+                    &.userData, &.alerts, .accessibility{
+                        display: block;
+                    }
+                    &.userData{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &.expanded{
+                .extras{
+                    display: none;
+                }
+            }
+        }
+
+        .login {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+            .login-side-image {
+                display: none;
+                border-radius: 0;
+                
+                .image {
+                    background-position: center center;
+                }
+            }
+            form{
+                width: 280px;
+                .flex{
+                    flex-wrap: wrap;
+                    text-align: center;
+                    .left, .right{
+                        place-content: center;
+                        place-items: center;
+                        place-self: center;
+                        text-align: center;
+                    }
+                }
+            }
+            .form {
+                width: 280px;
+                background-color: transparent;
+                box-shadow: none;
+
+                .col {
+
+                    //    display: none;
+                    &.grid {
+                        display: block;
+                    }
+                }
+
+                .flex {
+                    display: block;
+                    .col {
+                        width: 100%;
+                        clear: both;
+                        display: block;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sidebar{
+            display: none;
+            &.expanded{
+                display: block;
+            }
+        }
+
+        .content{
+            width: calc(100% - 10px);
+            padding-left: 10px;
+            .row{
+                .flex{
+                    flex-wrap: wrap;
+                }
+            }
+            .section-title{
+                &.with-buttons{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    > img{
+                        display: none;
+                    }
+                    > span{
+                        display: none;
+                    }
+                    .right{
+                        justify-self: center;
+                    }
+                }
+                .row {
+                    .flex {
+                        flex-wrap: no-wrap;
+                    }
+                }
+            }
+
+            .dash{
+                > span{
+                    width: calc(100% - 10px);
+                }
+                .patient-cards{
+                    width: calc(100% - 80px);
+                    &.xl{
+                        .expanded{
+                            &.collapsed{
+                                display: none;
+                            }
+                        }
+                    }
+                    &.m, &.s, &.xl {
+                        .cards{
+                            width: 100%;
+                            .card{
+                                min-width: 100%;
+                            }
+                        }
+                    }
+                    &.xl{
+                        .main-data{
+                            .icon {
+                                width: 12px;
+                                height: 12px;
+                                margin: -3px;
+                                margin-top: 14px;
+                                box-shadow: 0px 0px 5px #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .row-referral{
+                grid-template-columns: 100%;
+                .urgent{
+                    margin-bottom: 20px;
+                }
+                .patient-cards{
+                    width: calc(100% - 80px);
+                    &.xl{
+                        .expanded{
+                            &.collapsed{
+                                display: none;
+                            }
+                        }
+                    }
+                    &.m, &.s, &.xl {
+                        width: calc(100% - 22px);
+                        .cards{
+                            width: 100%;
+                            .card{
+                                min-width: calc(100% - 30px);
+                                width: 100%;
+                                max-width: auto;
+                            }
+                        }
+                    }
+                    &.xl{
+                        .main-data{
+                            .icon {
+                                width: 12px;
+                                height: 12px;
+                                margin: -3px;
+                                margin-top: 14px;
+                                box-shadow: 0px 0px 5px #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .care-plan-item{
+                .card{
+                    width: calc(33% - 15px);
+                }
+            }
+            
+        }
+
+        .profile {
+            .profile-card-expanded{
+                .card{
+                    min-width: auto;
+                }
+                .expanded{
+                    grid-template-columns: 50px 1fr 1fr;
+                    .pic{
+                        width: 40px;
+                        height: 40px;
+                        img{
+                            
+                        }
+                    }
+                }
+            }
+            .section-title {
+                &.more{
+                    div{
+                        background-color: #FFFFFF;
+                    } 
+                }
+                &.with-button, &.with-buttons {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+
+                    > img {
+                        display: none;
+                    }
+
+                    > span {
+                        display: none;
+                    }
+
+                    .right {
+                        justify-self: center;
+                    }
+                    .button, .careplan-button{
+                        button{
+                            &.stretched{
+                                font-size: 10px;
+                                padding: 10px;
+                                span{
+                                    font-size: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .row {
+                    .flex {
+                        flex-wrap: no-wrap;
+                    }
+                }
+            }
+            .custom-modal{
+                .body-modal{
+                    width: calc(100% - 100px);
+                    .close{
+                        top: -5px;
+                        right: -5px;
+                    }
+                }
+                .care-plan{
+                    .list-care-plan{
+                        width: 100px;
+                        height: 100px;
+                        .checked{
+                            img{
+                                width: 30px;
+                                margin-left: 5px;
+                                margin-top: 5px;
+                            }
+                        }
+                        .icon{
+                            width: 24px;
+                            margin: 10px auto;
+                            img, svg{
+                                width: 24px;
+                            }
+                        }
+                        .caps{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .toolbar {
+                .button {
+                    button {
+                        font-size: 12px;
+                        padding: 15px 5px;
+                    }
+                }
+            }
+
+            .form-plan{
+                .steps{
+                    flex-wrap: wrap;
+                }
+            }
+            .blur{
+                width: calc(100% - 10px);
+            }
+        }
+
+        .search{
+            .section-title {
+                &.with-buttons {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+
+                    >img {
+                        display: none;
+                    }
+
+                    .sortby {
+                        // display: none;
+                        font-size: 12px;
+                    }
+
+                    .right {
+                        justify-self: center;
+                        .dashboard-button{
+                            .card{
+                                border-radius: 20px !important;
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .content{
+                width: calc(100% - 20px);
+            }
+            .referral{
+                width: calc(100% - 43px);
+
+                .patient-cards{
+                    // width: calc(100% - 100px);
+    
+                    &.xl {
+                        .expanded {
+                            &.collapsed {
+                                display: none;
+                            }
+                        }
+                    }
+    
+                    &.m,
+                    &.s,
+                    &.xl {
+                        .cards {
+                            width: 100%;
+    
+                            .card {
+                                min-width: 100%;
+                            }
+                        }
+                    }
+    
+                    &.xl {
+                        .main-data {
+                            .icon {
+                                width: 12px;
+                                height: 12px;
+                                margin: -3px;
+                                margin-top: 14px;
+                                box-shadow: 0px 0px 5px #FFFFFF;
+                            }
+                        }
+                        .expanded-inline {
+                            min-width: 100%;
+                            .card {
+                                min-width: 100%;
+                            }
+                        }
+                    }
+
+                }
+            }
+            .pagination{
+                margin-left: 40px;
+                grid-template-columns: auto 1fr auto;
+                .link{
+                    padding: 15px auto;
+                }
+                .pages{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .toolbar{
+                .button{
+                    button{
+                        font-size: 12px;
+                        padding: 15px 5px;
+                    }
+                }
+            }
+        }
+
+
+        // .profile-card-expanded {
+        //     .card {
+        //         .expanded {
+        //             .col {
+        //                 .data {
+        //                     grid-template-columns: 1fr;
+
+        //                     .right {
+        //                         text-align: left;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .dash {
+        //     .patient-cards {
+
+        //         &.m,
+        //         &.s {
+        //             .cards {
+        //                 margin: 10px;
+        //             }
+        //         }
+
+        //         &.xl {
+        //             .cards {
+        //                 margin: 5px auto;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .row-referral {
+        //     .patient-cards {
+        //         &.xl {
+        //             .cards {
+        //                 .card {
+        //                     min-width: auto;
+        //                 }
+        //             }
+
+        //             .expanded {
+        //                 &.collapsed {
+        //                     display: none;
+        //                 }
+        //             }
+
+        //             .icon {
+        //                 width: 12px;
+        //                 height: 12px;
+        //                 margin: -3px;
+        //                 margin-top: 14px;
+        //                 box-shadow: 0px 0px 5px #FFFFFF;
+        //             }
+        //         }
+
+        //         &.m {
+        //             width: 50%;
+
+        //             .cards {
+        //                 .card {
+        //                     min-width: auto;
+        //                 }
+        //             }
+
+        //             .expanded {
+        //                 &.collapsed {
+        //                     display: none;
+        //                 }
+        //             }
+        //         }
+
+        //         &.s {
+        //             width: 100%;
+
+        //             .cards {
+        //                 .card {
+        //                     min-width: auto;
+        //                 }
+        //             }
+
+        //             .expanded {
+        //                 &.collapsed {
+        //                     display: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .to-be-approved {
+        //     .patients {
+        //         .patient-cards {
+        //             &.xxs {
+        //                 min-width: calc(100% - 18px);
+
+        //                 .cards {
+        //                     .card {}
+        //                 }
+        //             }
+        //         }
+
+        //         .buttons {
+        //             button {
+        //                 display: block;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .content-sidebar {
+        //     width: 0px;
+        //     overflow: hidden;
+        //     position: fixed;
+
+        //     &.exp {
+        //         border-radius: 30px;
+        //         width: 300px;
+        //         height: calc(100% - 140px);
+        //         overflow-y: auto;
+        //         position: fixed;
+        //         right: 0px;
+        //         padding: 10px;
+        //         top: 90px;
+        //         z-index: 999999;
+        //         background-color: #ffffffcc;
+        //         backdrop-filter: blur(20px);
+        //         padding-top: 20px;
+        //         animation: fadeInRight .5s forwards;
+        //         box-shadow: -5px 0px 40px #00000033;
+
+        //         .service-cards {
+        //             .box-cat {
+        //                 .cat {
+        //                     margin: 5px 7px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .content {
+        //     width: calc(100% - 110px);
+
+        //     .section-title {
+        //         &.with-buttons {
+        //             grid-template-columns: 20px auto 1fr;
+        //         }
+        //     }
+
+        //     .toolbar {
+        //         .col {
+        //             display: none;
+
+        //             &.button {
+        //                 min-width: auto;
+        //                 display: block;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,206 @@
+body, html{
+    &.high-contrast {
+        background-color: #000;
+        --primary: #FFF;
+        --secondary: #007AA9;
+        --negative: #BA161C;
+        --positive: #42BFB0;
+        --warning: #DDB35D;
+
+        --urgent: #ffcccc;
+        --urgentbg: #ffEEEE33;
+
+        --other1: #666;
+        --other2: #666;
+        --other3: #666;
+        --other4: #666;
+
+        --black: #666;
+        --g1: #666;
+        --g2: #666;
+        --g3: #FFF;
+        --g4: #000;
+        --white: #FFF;
+        --transparent: #FFF;
+
+        .cards {
+            .card {
+                color: #000;
+            }
+
+            .section-title {
+                img {
+                    filter: brightness(0);
+                }
+            }
+
+            .pic {
+                background: var(--g2);
+            }
+        }
+
+        .sidebar {
+
+            .label,
+            a,
+            a:visited,
+            a:active,
+            a:hover {
+                color: #284065;
+            }
+
+            .item.active {
+                background: #999;
+                border: none;
+            }
+
+            img {
+                //  filter: brightness(0);
+            }
+        }
+
+        .section-title {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .modal {
+            .section-title {
+                img {
+                    filter: none;
+                }
+
+                color: #284065;
+            }
+
+            label {
+                color: #284065;
+            }
+        }
+
+        .tabs {
+            .tab {
+                color: #000;
+
+                &.active {
+                    background: #000;
+                    border: solid 1px #FFF;
+                    color: #FFF;
+
+                    img {
+                        //  filter: none;
+                    }
+                }
+            }
+        }
+
+        button {
+            background: #000 !important;
+            border: solid 1px #FFF !important;
+
+            &.link {
+                border: none !important
+            }
+
+            img {
+                filter: brightness(0) invert(1) !important;
+            }
+        }
+
+        body button.normal img,
+        html button.normal img {
+            filter: brightness(0) invert(1) !important;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            border-color: #000 !important;
+            box-shadow: none;
+
+            &::placeholder {
+                color: #000 !important;
+            }
+        }
+
+        .dashboard-button{
+            .cards{
+                .card{
+                    background-color: var(--black) !important;
+                }
+            }
+        }
+
+        .dashboard .content .row-referral .col .referral{
+            background-color: var(--urgentbg) !important;
+        }
+        .dashboard .content .row-referral .col .referral.urgent{
+            background-color: var(--urgentbg) !important;
+        }
+
+        .patient-cards.m{
+            .expanded.collapsed{
+                display: none;
+            }
+        }
+
+        .to-be-approved{
+            .section-title{
+                span{
+                    color: var(--white) !important;
+                }
+            }
+            .patients.approval-list{
+                .cards{
+                    .card{
+                        .buttons{
+                            button{
+                                &.negative{
+                                    background: var(--negative) !important;
+                                }
+                                &.positive{
+                                    background: var(--positive) !important;
+                                }
+                                &.neutral{
+                                    background: var(--warning) !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content .toolbar {
+            color: var(--black);
+        }
+
+        .steps{
+            .step{
+                color: var(--black);
+            }
+        }
+
+    }
+
+    // Reduced Motion
+    .unanimated {
+        .patient-cards.emergency .cards .card,
+        .content .toolbar {
+            animation: none;
+            background-color: var(--urgent);
+            border-color: var(--urgent);
+
+            .expanded.collapsed {
+                background-color: var(--white);
+            }
+        }
+    }
+
+}

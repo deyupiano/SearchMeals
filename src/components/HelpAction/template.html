@@ -1,0 +1,9 @@
+<div class="help_action_container" id="needHelp">
+  <div class="main_text" @click="toggleOptionMenu()">Need help?</div>
+  <div class="options" v-show="optionMenuVisible">
+    <div v-for="option in data" class="option">
+      <a v-if="option.link" target="_blank" :href="option.link">{{option.name}}</a>
+      <span v-else>{{option.name}}</span>
+    </div>
+  </div>
+</div>
